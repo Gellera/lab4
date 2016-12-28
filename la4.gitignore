@@ -4,8 +4,9 @@ import (
 )
 
 type Token struct {
-recipient int
 data string
+recipient int
+
 }
 
 
