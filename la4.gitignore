@@ -1,0 +1,22 @@
+package main
+import (
+"fmt"
+)
+
+type Token struct {
+recipient int
+data string
+}
+
+
+func main() {
+tok := Token{recipient: 5, data: "token"}
+go pot(1, tok)
+fmt.Println("передалось")
+}
+
+func pot(j int,tot Token) {
+if (tot.recipient != j) {
+go pot(j+1, tot)
+}
+}
